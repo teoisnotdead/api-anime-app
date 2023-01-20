@@ -3,7 +3,7 @@ const cors = require('cors');
 const cookie = require('cookie-parser');
 const anime = require('./anime.controller');
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
     origin: "*",
@@ -29,4 +29,4 @@ app.get('*', (req, res) => {
         404 Not Found</h1>`);
 });
 
-app.listen(port, () => console.log(`App listening on port ${port}!`));
+app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
